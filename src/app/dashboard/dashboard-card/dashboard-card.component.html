@@ -1,0 +1,17 @@
+<div class="card text-white border-0 m-3" style="min-width: 15rem; min-height: 5rem;" [ngStyle]="{'background-color':card.color}">
+  <div class="card-body p-0 m-0">
+    <div class="d-flex align-items-center p-0">
+      <div class="col-md-5 p-0 ">
+        <div class="h-100 text-center vertical-border pt-4 pb-4">
+          <i class="material-icons p-2 font" [ngStyle]="{'color':card.icon_color}">{{card.icon}}</i>
+        </div>
+      </div>
+      <div class="col-md-7 p-0 h-100 ">
+        <div class="d-flex flex-column bd-highlight ">
+          <div class="p-4 bd-highlight w-100 horizontal-border text-center">{{card.number}}</div>
+          <div class="p-4 bd-highlight w-100 text-center">{{card.text}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

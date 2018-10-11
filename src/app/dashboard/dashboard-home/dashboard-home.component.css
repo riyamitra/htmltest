@@ -1,0 +1,16 @@
+.text-red{
+    color: #ef345e !important;
+}
+
+.rowwrap{
+    flex-wrap: nowrap !important;
+}
+
+card-height{
+    min-height: 266px !important;
+}
+
+.navbarheight{
+    height: 830px !important;
+}
+

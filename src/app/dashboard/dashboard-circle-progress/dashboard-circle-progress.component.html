@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="d-flex flex-column">
+    <h6 class="text-center">{{circle.text}}</h6>
+    <div class="text-center">
+      <circle-progress [percent]="circle.percentage" [radius]="60" [outerStrokeWidth]="8" [innerStrokeWidth]="0"
+        [outerStrokeColor]="circle.color" [innerStrokeColor]="'#C7E596'" [showBackground]="true" [animation]="true"
+        [animationDuration]="300" [titleColor]="circle.color" [unitsColor]="circle.color" [titleFontSize]=21
+        [unitsFontSize]=21 [subtitleFontSize]=0 [backgroundColor]="red">
+      </circle-progress>
+    </div>
+  </div>
+</div>

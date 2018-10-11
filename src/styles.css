@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.context-menu {
+  border-radius: 4px;
+  min-width: 130px;
+  font-size: 15px;
+}
+.context-menu.myCustomTheme, .context-menu.myCustomTheme .submenu {
+  background: #1d1d1d;
+  color: #969696;
+  box-shadow: 2px 3px 8px black;
+}
+.context-menu.myCustomTheme li:not(.disabled) button:hover {
+  background-color: #2f2f2f;
+}
+.context-menu.myCustomTheme ul {
+  border-top: 1px solid #676767;
+}
+
+.dndDragging {
+  opacity: 1 !important;
+  filter: opacity(1);
+}

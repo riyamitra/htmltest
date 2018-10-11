@@ -1,0 +1,11 @@
+.vertical-border{
+    border-right: 1px solid white !important;
+}
+
+.horizontal-border{
+    border-bottom: 1px solid white !important;
+}
+
+.font{
+    font-size: 5rem ;
+}

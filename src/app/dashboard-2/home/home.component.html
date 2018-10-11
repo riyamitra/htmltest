@@ -1,0 +1,115 @@
+<main role="main">
+  <div class="container-fluid p-0">
+    <div class="jumbotron">
+
+      <!-- <div class="row">
+        <div class="col">
+          <button (click)="clickedButton()">clicked me</button>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of dummy">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </li>
+
+          </ul>
+        </div>
+      </div> -->
+      <div class="row mb-3">
+
+        <!-- Progress-bar cards -->
+        <div class="col-md-5">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2>Stats</h2>
+              <div class="text-muted">Website metrics for <u>your awesome project</u></div>
+              <div class="row">
+                <div class="col-md-6" *ngFor="let card of cards">
+                  <app-progress-bar [card]=card></app-progress-bar>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tab-graph component -->
+        <div class="col-md-7 ">
+          <div class="card mb-3">
+            <div class="card-body p-0">
+              <h4 class="card-title tabposition font-weight-bold">History</h4>
+              <ngb-tabset class="" [justify]="'end'">
+                <ngb-tab title="Visit">
+                  <ng-template ngbTabContent>
+                    <app-tab-history></app-tab-history>
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab title="Downloads">
+                  <ng-template ngbTabContent>
+                    <app-tab-history></app-tab-history>
+                  </ng-template>
+                </ngb-tab>
+              </ngb-tabset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-9">
+          <div class="card">
+            <div class="card-title p-2 m-0">
+              <div class="d-flex">
+                <h4 class="ml-3">Items</h4>
+                <button type="button" class="btn btn-success ml-3">Add new</button>
+                <div class="ml-auto">
+                  <div class="d-flex">
+                    <i class="material-icons text-muted pt-2">search</i>
+                    <input class="form-control border-0 pl-0" type="text" placeholder="search..">
+                    <button type="button" class="btn btn-success mr-2">^</button>
+                    <button type="button" class="btn btn-success">^</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body bg-grey">
+              <div class="row">
+                <div class="col-3 col-md-3 text-muted font-weight-bold"> Name </div>
+                <div class="col-3 col-md-3  text-muted text-left font-weight-bold"> Sales </div>
+                <div class="col-3 col-md-3 text-muted text-center font-weight-bold"> Stats </div>
+                <div class="col-3 col-md-3  text-muted text-right font-weight-bold"> Published </div>
+              </div>
+
+            </div>
+            <div class="overflow" *ngFor="let item of itemList">
+              <app-item-list></app-item-list>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 ">
+          <div class="card h-100">
+            <div class="card-title">
+              <div class="font-weight-bold text-muted p-2">Sales Breakdown</div>
+            </div>
+            <app-dashboard [colors]="colors" [title]="title" [innerSize]="innerSize"></app-dashboard>
+
+          </div>
+        </div>
+      </div>
+      <button [routerLink]="'/dashboard'">Go to dashboard1</button>
+    </div>
+  </div>
+</main>

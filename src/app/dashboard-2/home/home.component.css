@@ -1,0 +1,12 @@
+.tabposition{
+    position: absolute;
+    top:2%;
+    left:3%;
+}
+
+.bg-grey{
+    background-color: #f0f2f5;
+}
+.overflow{
+    overflow: auto;
+}

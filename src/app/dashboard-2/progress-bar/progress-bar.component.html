@@ -1,0 +1,21 @@
+<div class="d-flex flex-column m-2">
+  <div class="row">
+    <div class="col-md-3 h-100 text-center">
+      <i class="material-icons font text-muted pt-2 pl-2">{{card.icon}}</i>
+    </div>
+    <div class="col-md-9">
+      <div class="d-flex flex-column bd-highlight mb-1">
+        <h4 class="m-0 text-muted">{{card.number}}</h4>
+        <div>{{card.text}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="progress barheight">
+        <div class="progress-bar bg-success" role="progressbar" [attr.aria-valuenow]='card.progressValue' aria-valuemin="0"
+          aria-valuemax="100" [ngStyle]="{'width':card.progressValue+'%'}"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div dndDropzone [dndHorizontal]="layout.dndHorizontal" dndEffectAllowed="copyMove" (dndDrop)="onDrop($event, draggableListLeft)"
+  class="row dndList" style="background: white;">
+
+  <div dndPlaceholderRef class="dndPlaceholder">Placeholdewr
+  </div>
+
+  <div class="col-md-4" *ngFor="let item of draggableListLeft" [dndDraggable]="item" [dndEffectAllowed]="item.effectAllowed"
+    [dndDisableIf]="item.disable" (dndStart)="onDragStart($event)" (dndMoved)="onDragged(item, draggableListLeft, 'move')"
+    (dndEnd)="onDragEnd($event)" (dndCanceled)="onDragCanceled($event)">
+    <!-- <div class="mat-icon" *ngIf="item.handle" dndHandle>drag_handle</div> -->
+
+    <div class="card m-2 p-2">
+      <div class="card-body">
+        <button type="button" class="close closeposition" (click)="delete(item)">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="card-title">{{item.content}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">effectAllowed: {{item.effectAllowed}}</h6>
+      </div>
+    </div>
+  </div>
+
+</div>
